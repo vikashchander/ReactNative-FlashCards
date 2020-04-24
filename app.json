@@ -23,6 +23,8 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "React Native Flash-Cards",
+    "githubUrl": "https://github.com/vikashchander/ReactNative-FlashCards"
   }
 }

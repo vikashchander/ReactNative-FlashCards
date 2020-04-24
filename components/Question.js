@@ -18,7 +18,7 @@ function Question(props) {
         <Text style={styles.btnText}>Correct</Text>
       </TouchableOpacity>
       <TouchableOpacity
-        style={[styles.btn, { backgroundColor: 'red' }]}
+        style={[styles.btn, { backgroundColor: '#ba2e21' }]}
         onPress={() => answer('incorrect')}>
         <Text style={styles.btnText}>Incorrect</Text>
       </TouchableOpacity>
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   btn: {
     width: 150,
     height: 50,
-    backgroundColor: 'blue',
+    backgroundColor: '#2A4B7C',
     padding: 15,
     marginLeft: 10,
     marginRight: 10,

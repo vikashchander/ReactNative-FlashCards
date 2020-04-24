@@ -7,7 +7,7 @@ class DeckList extends Component {
   
   render() {
     const { id, title, cardsNum, navigation } = this.props;
-
+console.log(title)
     return (
       <View style={styles.container}>
         <TouchableOpacity

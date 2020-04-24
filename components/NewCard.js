@@ -15,7 +15,7 @@ class NewCard extends Component {
   static navigationOptions = {
     title: 'New Card',
     headerStyle: {
-      backgroundColor: 'green',
+      backgroundColor: '#123458',
     },
     headerTintColor: '#fff',
     headerTitleStyle: {
@@ -52,6 +52,7 @@ class NewCard extends Component {
       <KeyboardAvoidingView behavior="padding" style={styles.container}>
         <Text style={styles.label}>Question</Text>
         <TextInput
+          placeholder='Enter Question Here'
           value={question}
           style={styles.input}
           onChangeText={question => this.setState({ question })}
@@ -59,6 +60,7 @@ class NewCard extends Component {
         />
         <Text style={styles.label}>Answer</Text>
         <TextInput
+        placeholder='Enter Answer Here'
           value={answer}
           style={styles.input}
           onChangeText={answer => this.setState({ answer })}
@@ -73,7 +75,8 @@ class NewCard extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    top:40,
+     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     margin: 40,
@@ -86,17 +89,19 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     marginBottom: 15,
     fontSize: 20,
+    borderRadius: 10
   },
   label: {
     fontSize: 20,
   },
   submitBtn: {
-    backgroundColor: 'black',
+    backgroundColor: '#20517E',
     padding: 12,
     height: 50,
     marginLeft: 40,
     marginRight: 40,
     marginBottom: 100,
+    borderRadius: 10
   },
   submitBtnText: {
     color: 'white',

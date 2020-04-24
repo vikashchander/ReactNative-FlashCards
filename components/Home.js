@@ -7,18 +7,18 @@ import { getAllDecks } from '../utils/Api';
 import DeckList from './deckList';
 
 class Home extends Component {
-  // static navigationOptions = {
-  //   title: 'Home',
-  //   headerStyle: {
-  //     backgroundColor: 'green',
-  //   },
-  //   headerTintColor: '#fff',
-  //   headerTitleStyle: {
-  //     fontWeight: 'bold',
-  //     fontSize:25,
+  static navigationOptions = {
+    title: 'Home',
+    headerStyle: {
+      backgroundColor: '#ba2e21',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+      fontSize:25,
       
-  //   },
-  // };
+    },
+  };
   componentDidMount() {
     getAllDecks().then(decs => {
       this.props.dispatch(receiveDecks(decs));

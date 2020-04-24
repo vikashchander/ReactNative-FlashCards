@@ -9,7 +9,7 @@ class Quiz extends Component {
   static navigationOptions = {
     title: 'Quiz',
     headerStyle: {
-      backgroundColor: 'green',
+      backgroundColor: '#123458',
     },
     headerTintColor: '#fff',
     headerTitleStyle: {
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
     marginTop: 10,
     marginLeft: 10,
-    color: 'black',
+    color: '#20517E',
     fontWeight: 'bold',
     fontSize: 20,
   },

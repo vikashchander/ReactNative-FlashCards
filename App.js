@@ -2,10 +2,11 @@ import * as React from 'react';
 import { Text, View, StyleSheet, AsyncStorage } from 'react-native';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
 import Constants from 'expo-constants';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
-import Icon from 'react-native-vector-icons/Ionicons';
 import { createAppContainer } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 
@@ -23,20 +24,27 @@ const TabNavigator =  createMaterialBottomTabNavigator(
     Home: { 
       screen: Home,
       navigationOptions:{
-        tabBarIcon:({tintColor})=>{
+        tabBarIcon:({tintColor})=>(
           <View>
-                  <Icon name={'ios-home'} style={[{color:tintColor}]}  size={25}/>
+                  <MaterialCommunityIcons name='cards' style={[{color:tintColor}]}  size={25}/>
           </View>
-        }
-      } 
+        )
+      }
     },
-    AddDeck: { screen: NewDeck },
+    AddDeck: { screen: NewDeck,
+      navigationOptions:{
+        tabBarIcon:({tintColor})=>(
+          <View>
+                  <MaterialIcons name='playlist-add' style={[{color:tintColor}]}  size={25}/>
+          </View>
+        )
+      } },
   },
   {
     initialRouteName: 'Home',
     activeColor: '#f0edf6',
-    inactiveColor: '#3e2465',
-    barStyle: { backgroundColor: '#694fad' },
+    inactiveColor: '#078ab2',
+    barStyle: { backgroundColor: '#10487f' },
   }
 );
 

@@ -16,7 +16,7 @@ class NewDeck extends Component {
   static navigationOptions = {
     title: 'New Deck',
     headerStyle: {
-      backgroundColor: 'green',
+      backgroundColor: '#123458',
     },
     headerTintColor: '#fff',
     headerTitleStyle: {
@@ -56,8 +56,9 @@ class NewDeck extends Component {
 
     return (
       <KeyboardAvoidingView behavior="padding" style={styles.container}>
-        <Text style={styles.question}>What is the title of your new deck ?!</Text>
+        <Text style={styles.question}>What is the title of your new deck ?</Text>
         <TextInput
+          placeholder="Enter Deck Title"
           value={nameOfDeck}
           style={styles.input}
           onChangeText={nameOfDeck => this.setState({ nameOfDeck })}
@@ -90,14 +91,16 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     margin: 20,
     fontSize: 20,
+    borderRadius: 10
   },
   submitBtn: {
-    backgroundColor: 'black',
+    backgroundColor: '#20517E',
     padding: 12,
     height: 50,
     marginLeft: 40,
     marginRight: 40,
     marginBottom: 60,
+    borderRadius: 10
   },
   submitBtnText: {
     color: 'white',

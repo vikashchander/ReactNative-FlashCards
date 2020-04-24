@@ -41,7 +41,7 @@ const dummyData = {
         ],
       },
   React: {
-    title: 'React',
+    title: 'React Js',
     questions: [
       {
         question: 'What is React?',
@@ -58,7 +58,7 @@ const dummyData = {
     ],
   },
   Node: {
-    title: 'NodeJs',
+    title: 'Node Js',
     questions: [
       {
         question: 'What is node.js?',

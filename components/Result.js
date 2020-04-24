@@ -5,19 +5,19 @@ import Question from './Question';
 
 function Result(props) {
   const { correct, incorrect, restart, deck, deckId, navigation } = props;
-
+  const results=Math.round((correct / deck.questions.length) * 100)
   return (
     <View style={styles.container}>
       <View style={styles.results}>
         <Text style={styles.score}>Correct: {correct}</Text>
         <Text style={styles.score}>Incorrect: {incorrect}</Text>
         <Text style={styles.score}>
-          {Math.round((correct / deck.questions.length) * 100)}%
+          {results<=50 ?`🙁 ${results}%` :`🙂 ${results}% `}
         </Text>
       </View>
 
       <TouchableOpacity
-        style={[styles.btn, { backgroundColor: 'black', marginTop: 25 }]}
+        style={[styles.btn, { backgroundColor: '#20517E', marginTop: 25, borderRadius:10 }]}
         onPress={() => {
           restart();
           navigation.push('Quiz', { deckId: deckId });
@@ -26,7 +26,7 @@ function Result(props) {
       </TouchableOpacity>
 
       <TouchableOpacity
-        style={[styles.btn, { backgroundColor: 'white', marginTop: 25 }]}
+        style={[styles.btn, { backgroundColor: 'white', marginTop: 25, borderRadius:10 }]}
         onPress={() =>
           navigation.navigate('Deck', { deckId: deckId, deckName: deck.title })
         }>

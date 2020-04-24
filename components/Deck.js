@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 
@@ -34,13 +35,14 @@ class Deck extends Component {
           <Text style={styles.btnText}>Add Card</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={[styles.btn, { backgroundColor: 'black' }]}
+          style={[styles.btn, { backgroundColor: '#20517E' }]}
           onPress={() =>
             questions.length === 0
               ? alert('no cards you must Add new Cards ')
               : this.props.navigation.navigate('Quiz', { deckId: deckId })
           }>
-          <Text style={[styles.btnText, { color: 'white' }]}>Start Quiz!</Text>
+          <Text style={[styles.btnText, { color: '#ECECEC' }]}>
+          <MaterialCommunityIcons name={'timer-sand'} size={25} />Start Quiz!</Text>
         </TouchableOpacity>
       </View>
     );

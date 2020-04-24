@@ -6,7 +6,7 @@ class Deck extends Component {
   static navigationOptions = {
     title: 'Deck',
     headerStyle: {
-      backgroundColor: 'green',
+      backgroundColor: '#123458',
     },
     headerTintColor: '#fff',
     headerTitleStyle: {

@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { withNavigation } from 'react-navigation';
-import Question from './Question';
 
 function Result(props) {
   const { correct, incorrect, restart, deck, deckId, navigation } = props;

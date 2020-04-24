@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons,FontAwesome } from '@expo/vector-icons';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 
@@ -22,20 +22,20 @@ class Deck extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.card}>
-          <Text style={styles.title}>{title}</Text>
+          <Text style={styles.title}> <FontAwesome name='angellist' size={35} /> {title}</Text>
           <Text style={styles.count}>
             {questions.length} {questions.length === 1 ? `card` : `cards`}
           </Text>
         </View>
         <TouchableOpacity
-          style={[styles.btn, { marginTop: 50 }]}
+          style={[styles.btn, { marginTop: 50,borderRadius:10 }]}
           onPress={() =>
             this.props.navigation.navigate('AddCard', { deckId: deckId })
           }>
           <Text style={styles.btnText}>Add Card</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={[styles.btn, { backgroundColor: '#20517E' }]}
+          style={[styles.btn, { backgroundColor: '#20517E',borderRadius:10 }]}
           onPress={() =>
             questions.length === 0
               ? alert('no cards you must Add new Cards ')
@@ -57,6 +57,8 @@ const styles = StyleSheet.create({
   },
   card: {
     backgroundColor: 'white',
+    borderRadius:12,
+    borderColor: '#485461',
     borderWidth: 1,
     padding: 50,
     marginLeft: 10,

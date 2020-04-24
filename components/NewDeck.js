@@ -7,10 +7,8 @@ import {
   StyleSheet,
 } from 'react-native';
 import { connect } from 'react-redux';
-
 import { generateId, createDeck, saveDeck } from '../utils/Api';
 import { addDeck } from '../actions/decks';
-// import { saveDeck } from '../utils/api';
 
 class NewDeck extends Component {
   static navigationOptions = {

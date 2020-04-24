@@ -14,11 +14,11 @@ function Question(props) {
       <TouchableOpacity onPress={flip}>
         <Text>{showAnswer ? 'Show Question' : 'Show Answer'}</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.btn} onPress={() => answer('correct')}>
+      <TouchableOpacity style={[styles.btn,{borderRadius:10}]} onPress={() => answer('correct')}>
         <Text style={styles.btnText}>Correct</Text>
       </TouchableOpacity>
       <TouchableOpacity
-        style={[styles.btn, { backgroundColor: '#ba2e21' }]}
+        style={[styles.btn, { backgroundColor: '#ba2e21',borderRadius:10 }]}
         onPress={() => answer('incorrect')}>
         <Text style={styles.btnText}>Incorrect</Text>
       </TouchableOpacity>

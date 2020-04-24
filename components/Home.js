@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, FlatList } from 'react-native';
+import {  View, StyleSheet, FlatList } from 'react-native';
 import { connect } from 'react-redux';
-
 import { receiveDecks } from '../actions/decks';
 import { getAllDecks } from '../utils/Api';
 import DeckList from './deckList';
@@ -10,13 +9,12 @@ class Home extends Component {
   static navigationOptions = {
     title: 'Home',
     headerStyle: {
-      backgroundColor: '#ba2e21',
+      backgroundColor: '#123458',
     },
     headerTintColor: '#fff',
     headerTitleStyle: {
       fontWeight: 'bold',
-      fontSize:25,
-      
+      fontSize: 25,
     },
   };
   componentDidMount() {
